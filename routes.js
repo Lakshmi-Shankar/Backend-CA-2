@@ -52,7 +52,8 @@ route.post("/post", async(req,res)=>{
         const { title,director,genre,releaseYear,avaliableCopies } = req.body;
         if(!title || !director || !genre || !releaseYear || !avaliableCopies){
             res.status(400).json({
-                Message: "All fields are required"
+                Message: "All fields are required",
+                dat: req.body
             })
         }
 
